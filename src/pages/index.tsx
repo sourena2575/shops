@@ -1,3 +1,7 @@
+import {DesignLayout,LoginCard} from 'components'
+
 export default function Home() {
-  return <div className="bg-red-400">test</div>;
+  return <DesignLayout>
+    <LoginCard/>
+  </DesignLayout>;
 }
