@@ -1,24 +1,28 @@
 import {useForm} from 'react-hook-form'
-import {GeneralLink} from 'components'
+import {GeneralLink,FormInput} from 'components'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons'
+import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 export const LoginForm = () => {
-
-    const {register} = useForm()
+    const {register,handleSubmit,errors} = useForm();
+    console.log(errors,'errors')
+    const onSubmit =(data)=>{
+        console.log(data,'data')
+    }
     return (
-        <div className='flex flex-col justify-center items-center'>
-            <p>یا با نام کاربری ثبت نامی خود وارد شوید.</p>
-            <input type='text' placeholder='نام کاربری' name='userName' ref={register({required:'لطفا نام کاربری را وارد کنید.'})} className='h-12'/>
-            <input type='text' placeholder='رمز عبور' name='password' ref={register({required:'لطفا رمزعبور را وارد کنید.'})} className='h-12' />           
-            <GeneralLink className='justify-self-end' ><p>رمز عبور خود را فراموش کرده ام.</p></GeneralLink>
-            <div className='flex flex-row-reverse'>
-            <div>هنوز حساب کاربری ندارید؟</div>
-            <GeneralLink className='text-green-600'>ثبت نام کنید.</GeneralLink>
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-center items-center'>
+            <p className='text-xs text-gray-500 mb-8 '>یا با نام کاربری ثبت نامی خود وارد شوید.</p>
+            <FormInput type='text' placeholder='نام کاربری' name='userName' register={register} error={errors.userName} errorMessage='.لطفا نام کاربری را وارد کنید' /> 
+            <FormInput type='text' placeholder='رمز عبور' name='password' register={register} error={errors.password} errorMessage='.لطفارمزعبور را وارد کنید'  />           
+
+            <GeneralLink className='w-full text-left text-xs text-gray-500 mb-5' ><p>.رمز عبور خود را فراموش کرده ام</p></GeneralLink>
+            <div className='flex flex-row-reverse mb-8 text-sm'>
+            <span  >هنوز حساب کاربری ندارید؟</span>
+            <GeneralLink className='text-green-300 hover:text-green-400 mr-2'>.ثبت نام کنید</GeneralLink>
             
             </div>
-        <button className='self-end text-white bg-green-600 w-20 h-10 ' type='submit'>
-                <FontAwesomeIcon icon={faArrowCircleRight}/>
+        <button className='self-end text-white bg-green-300 w-20 h-12 rounded-lg flex justify-center items-center focus:outline-none hover:bg-green-400' type='submit'>
+                <FontAwesomeIcon icon={faArrowRight} className='text-xl' style={{width:'1em'}}/>
             </button>
-        </div>
+        </form>
     )
 }
