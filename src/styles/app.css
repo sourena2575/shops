@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* add iran sans font */
+@font-face {
+    font-family: 'IRANSansFaNum';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../../public/assets/fonts/IRANSansFa/eot/IRANSansWeb(FaNum)_UltraLight.eot');
+    src: url('../../public/assets/fonts/IRANSansFa/eot/IRANSansWeb(FaNum)_UltraLight.eot?#iefix')
+      format('embedded-opentype');
+    src: url('../../public/assets/fonts/IRANSansFa/woff2/IRANSansWeb(FaNum)_UltraLight.woff2')
+      format('woff2');
+    src: url('../../public/assets/fonts/IRANSansFa/woff/IRANSansWeb(FaNum)_UltraLight.woff')
+      format('woff');
+    src: url('../../public/assets/fonts/IRANSansFa/ttf/IRANSansWeb(FaNum)_UltraLight.ttf')
+      format('truetype');
+  }
+
+  @font-face {
+    font-family: 'IRANSansFaNum';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../public/assets/fonts/IRANSansFa/eot/IRANSansWeb(FaNum)_Light.eot');
+    src: url('../../public/assets/fonts/IRANSansFa/eot/IRANSansWeb(FaNum)_Light.eot?#iefix')
+      format('embedded-opentype');
+    src: url('../../public/assets/fonts/IRANSansFa/woff2/IRANSansWeb(FaNum)_Light.woff2')
+      format('woff2');
+    src: url('../../public/assets/fonts/IRANSansFa/woff/IRANSansWeb(FaNum)_Light.woff')
+      format('woff');
+    src: url('../../public/assets/fonts/IRANSansFa/ttf/IRANSansWeb(FaNum)_Light.ttf')
+      format('truetype');
+  }
+
+  @font-face {
+    font-family: 'IRANSansFaNum';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../public/assets/fonts/IRANSansFa/eot/IRANSansWeb(FaNum)_Medium.eot');
+    src: url('../../public/assets/fonts/IRANSansFa/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix')
+      format('embedded-opentype');
+    src: url('../../public/assets/fonts/IRANSansFa/woff2/IRANSansWeb(FaNum)_Medium.woff2')
+      format('woff2');
+    src: url('../../public/assets/fonts/IRANSansFa/woff/IRANSansWeb(FaNum)_Medium.woff')
+      format('woff');
+    src: url('../../public/assets/fonts/IRANSansFa/ttf/IRANSansWeb(FaNum)_Medium.ttf')
+      format('truetype');
+  }
+
+  @font-face {
+    font-family: 'IRANSansFaNum';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../public/assets/fonts/IRANSansFa/eot/IRANSansWeb(FaNum)_Bold.eot');
+    src: url('../../public/assets/fonts/IRANSansFa/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix')
+      format('embedded-opentype');
+    src: url('../../public/assets/fonts/IRANSansFa/woff2/IRANSansWeb(FaNum)_Bold.woff2')
+      format('woff2');
+    src: url('../../public/assets/fonts/IRANSansFa/woff/IRANSansWeb(FaNum)_Bold.woff')
+      format('woff');
+    src: url('../../public/assets/fonts/IRANSansFa/ttf/IRANSansWeb(FaNum)_Bold.ttf')
+      format('truetype');
+  }
