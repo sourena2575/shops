@@ -8,13 +8,17 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      body: ['IRANSansFaNum'],
-      iransans: ['IRANSansFaNum'],
-    
+      body: ["IRANSansFaNum"],
+      iransans: ["IRANSansFaNum"],
     },
-    extend: {},
+    extend: {
+      spacing: {
+        "400px": "400px",
+        "600px": "600px",
+      },
+    },
   },
-  
+
   variants: {
     extend: {},
   },

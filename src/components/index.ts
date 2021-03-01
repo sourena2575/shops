@@ -1,3 +1,4 @@
-export * from './layouts'
-export * from './design'
-export * from './general'
+export * from "./card";
+export * from "./text";
+export * from "./range";
+export * from "./button";
